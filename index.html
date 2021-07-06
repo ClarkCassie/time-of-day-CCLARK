@@ -94,16 +94,24 @@
 		let myHour = myDate.getHours();
 
 		//LINE BELOW FOR TESTING - REMOVE BEFORE PLACEING IN SERVICE
-		myHour = 13;
+		myHour = 23;
 
-		if(myHour < 12){
+		if(myHour < 5 || myHour == 23){
+			myText = "Good Night!";
+			myColor = "purple";
+			myPic = "images/night.jpg";
+		}else if(myHour < 5){
 			myText = "Good Morning!";
 			myColor = "orange";
 			myPic = "images/morning.jpg";
-		}else{
+		}else if(myHour < 19){
 			myText = "Good Afternoon!";
 			myColor = "green";
 			myPic = "images/afternoon.jpg";
+		}else{
+			myText = "Good Evening!";
+			myColor = "red";
+			myPic = "images/evening.jpg";
 		}
 
 		//console.log(myText);
